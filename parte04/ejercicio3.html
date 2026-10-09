@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <label for="nombre">Escribe tu nombre:</label>
+    <input id="nombre" type="text">
+
+    <p>Estás escribiendo: <span id="resultado"></span></p>
+
+    <script>
+        const campo = document.getElementById("nombre");
+        const resultado = document.getElementById("resultado");
+
+        campo.addEventListener("input", function() {
+            resultado.textContent = campo.value;
+        });
+    </script>
+
+</body>
+</html>

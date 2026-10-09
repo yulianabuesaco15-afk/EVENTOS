@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+    <p id="mensaje">Este es el texto original.</p>
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+        const parrafo = document.getElementById("mensaje");
+        const boton = document.getElementById("boton");
+
+        boton.addEventListener("click", function() {
+            parrafo.textContent = "El texto ha cambiado.";
+        });
+    </script>
+
+</body>
+</html>

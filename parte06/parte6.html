@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plataforma educativa</title>
+</head>
+<body>
+
+    <h1>Plataforma educativa</h1>
+
+    <h2>Buscar cursos</h2>
+
+    <input
+        type="text"
+        id="busqueda"
+        placeholder="Escribe el nombre del curso"
+    >
+
+    <ul id="cursos">
+        <li>JavaScript básico</li>
+        <li>Bases de datos</li>
+        <li>Programación orientada a objetos</li>
+        <li>Desarrollo web</li>
+    </ul>
+
+    <p id="resultado"></p>
+
+    <script>
+        const busqueda = document.getElementById("busqueda");
+        const cursos = document.querySelectorAll("#cursos li");
+        const resultado = document.getElementById("resultado");
+
+        busqueda.addEventListener("input", function() {
+            const texto = busqueda.value.toLowerCase();
+            let encontrados = 0;
+
+            cursos.forEach(function(curso) {
+                if (curso.textContent.toLowerCase().includes(texto)) {
+                    curso.hidden = false;
+                    encontrados++;
+                } else {
+                    curso.hidden = true;
+                }
+            });
+
+            resultado.textContent =
+                encontrados + " curso(s) encontrado(s).";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+
+    <style>
+        .resaltada {
+            background-color: lightblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="seccion">
+        Esta es mi sección.
+    </section>
+
+    <button id="cambiar">Cambiar fondo</button>
+    <button id="restaurar">Restaurar fondo</button>
+
+    <script>
+        const seccion = document.getElementById("seccion");
+
+        document.getElementById("cambiar")
+            .addEventListener("click", function() {
+                seccion.classList.add("resaltada");
+            });
+
+        document.getElementById("restaurar")
+            .addEventListener("click", function() {
+                seccion.classList.remove("resaltada");
+            });
+    </script>
+
+</body>
+</html>

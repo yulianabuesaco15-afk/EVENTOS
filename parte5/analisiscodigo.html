@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Investigación del DOM</title>
+</head>
+<body>
+
+    <h1 id="titulo">Mi aplicación</h1>
+
+    <p id="mensaje">Esperando una acción...</p>
+
+    <button id="boton">Presionar</button>
+
+    <script>
+        const titulo = document.getElementById("titulo");
+        const mensaje = document.getElementById("mensaje");
+        const boton = document.getElementById("boton");
+
+        let estaAzul = false;
+
+        boton.addEventListener("click", function(event) {
+
+            mensaje.textContent = "El botón fue presionado";
+
+            estaAzul = !estaAzul;
+
+            if (estaAzul) {
+                titulo.style.color = "blue";
+            } else {
+                titulo.style.color = "red";
+            }
+
+            console.log(event.target);
+        });
+    </script>
+
+</body>
+</html>
